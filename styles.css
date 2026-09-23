@@ -1,0 +1,107 @@
+/* Color Palette & Base Setup */
+:root {
+    --bg-color: #fffafb;
+    --primary: #ffe4e1;
+    --accent: #d6336c;
+    --text-main: #4a4a4a;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    background-color: var(--primary);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    color: var(--accent);
+    font-style: italic;
+}
+
+nav { margin-top: 1.5rem; }
+
+nav a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav a:hover { text-decoration: underline; }
+
+/* Main Content Area */
+main {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Timeline specific (Our Story) */
+.timeline-item {
+    border-left: 3px solid var(--primary);
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 2.5rem;
+    text-align: left;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 5px;
+    width: 17px;
+    height: 17px;
+    background: var(--accent);
+    border-radius: 50%;
+}
+
+.date {
+    font-size: 0.85rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Video specific */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    margin-bottom: 1.5rem;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    border: none;
+}
